@@ -1,0 +1,19 @@
+:root
+{
+    --black: #000;
+    --white: #fff;
+
+    --light_red: #fc5c65;
+    --light_blue_darker: #3198e8;
+    --light_blue: #35a7ff;
+    --light_green: #26de81;
+    --light_grey: #e8e8e8;
+    --light_orange: #fd9644;
+
+    --dark_red: #eb3b5a;
+    --dark_blue: #38618c;
+    --dark_grey: #2e3131;
+    --dark_green: #20bf6b;
+    --dark_orange: #fa8231;
+
+}
