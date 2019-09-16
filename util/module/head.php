@@ -4,7 +4,10 @@
 <link rel="stylesheet" href="../../assets/css/color.css" />
 
 <!--Custom Stylesheets-->
+<link rel="stylesheet" href="../../assets/css/elements.css" />
 <link rel="stylesheet" href="../../assets/css/main.css" />
+<link rel="stylesheet" href="../../assets/css/sidebar.css" />
+<link rel="stylesheet" href="../../assets/css/navigation.css" />
 
 <!--JavaScript Libraries-->
 <script src="https://kit.fontawesome.com/d3420f7f4c.js"></script>

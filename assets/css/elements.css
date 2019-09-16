@@ -1,0 +1,23 @@
+.btn
+{
+    width: 30%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 1rem;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {transform: scale(1.07)}
+
+.btn_error {background-color: var(--light_red);}
+.btn_warning {background-color: var(--light_orange);}
+.btn_settings {background-color: var(--light_blue);}
+.btn_submit {background-color: var(--light_green);}
+
+.btn_error:hover {background-color: var(--dark_red);}
+.btn_warning:hover {background-color: var(--dark_orange);}
+.btn_settings:hover {background-color: var(--light_blue_darker);}
+.btn_submit:hover {background-color: var(--dark_green);}

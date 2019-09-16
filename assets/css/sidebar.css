@@ -1,0 +1,55 @@
+#sidebar
+{
+    position: relative;
+    width: 25%;
+    height: 100vh;
+    background-color: var(--prim2);
+    float: left;
+}
+
+#sidebar h1
+{
+    text-align: center;
+    color: var(--white);
+    padding: 2rem 0 2rem 0;
+    border-bottom: 1px solid var(--prim0);
+}
+
+#sidebar #user_info {border-bottom: 1px solid var(--prim0);}
+
+#sidebar #user_info p
+{
+    color: var(--white);
+    font-size: 1.2rem;
+    margin: 1rem 0 1rem 5%;
+}
+
+#sidebar #btn_statistics,
+#sidebar #btn_settings {margin-left: 15%;}
+
+#sidebar #btn_management,
+#sidebar #btn_logout {margin-left: 10%;}
+
+#sidebar #btn_admin {margin-top: 2rem;}
+
+#sidebar #btn_user {margin: 2rem 0 1rem 0;}
+
+#sidebar #footer
+{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem 0 1rem 0;
+    border-top: 1px solid var(--prim0);
+}
+
+#sidebar #footer p,
+#sidebar #footer h3 {color: var(--white);}
+
+#sidebar #footer p {font-size: 0.7rem;}
+
+#sidebar #footer h3 {font-weight: 600; font-size: 0.8rem;}
+
+#status_color {color: var(--light_green);}
+#role_color {color: var(--light_red);}
