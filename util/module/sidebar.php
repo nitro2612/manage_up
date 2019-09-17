@@ -1,26 +1,29 @@
 <div id="sidebar">
-    <?php $_SESSION['userid'] = 1; ?>
+    <?php $_SESSION['user_id'] = 1; ?>
+    <div id="btn_close">
+        <i class="far fa-times-circle fa-2x"></i>
+    </div>
     <h1>manageUP</h1>
     <span class="seperator"></span>
     <div id="user">
         <div id="user_info">
-            <p id="status">Status: <span id="status_color">Online</span></p>
-            <p id="name">Name: Daniel Reinhold</p>
-            <p id="role">Rolle: <span id="role_color">Admin</span></p>
-            <p id="area">Bereich: Local Networks</p>
-            <p id="department">Abteilung: Software</p>
+            <p id="status"><?php echo $lang['sidebar']['status'] ?> <span id="status_color">Online</span></p>
+            <p id="name"><?php echo $lang['sidebar']['name'] ?> Daniel Reinhold</p>
+            <p id="role"><?php echo $lang['sidebar']['role'] ?> <span id="role_color">Admin</span></p>
+            <p id="area"><?php echo $lang['sidebar']['area'] ?> Local Networks</p>
+            <p id="department"><?php echo $lang['sidebar']['department'] ?> Software</p>
         </div>
         <span></span>
         <div id="actions">
             <?php if(isset($_SESSION['userid'])): ?>
                 <div id="btn_admin">
-                    <button id="btn_statistics" class="btn btn_warning">Statistiken</button>
-                    <button id="btn_management" class="btn btn_warning">Verwaltung</button>
+                    <button id="btn_statistics" class="btn btn_warning"><?php echo $lang['sidebar']['buttons']['statistics'] ?></button>
+                    <button id="btn_management" class="btn btn_warning"><?php echo $lang['sidebar']['buttons']['management'] ?></button>
                 </div>
             <?php endif ?>
             <div id="btn_user">
-                <button id="btn_settings" class="btn btn_settings">Einstellungen</button>
-                <button id="btn_logout" class="btn btn_error">Abmelden</button>
+                <button id="btn_settings" class="btn btn_settings"><?php echo $lang['sidebar']['buttons']['settings'] ?></button>
+                <button id="btn_logout" class="btn btn_error"><?php echo $lang['sidebar']['buttons']['logout'] ?></button>
             </div>
         </div>
         <div id="footer">

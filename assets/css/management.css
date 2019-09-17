@@ -1,0 +1,114 @@
+#management
+{
+    width: 75%;
+    height: 100vh;
+    float: right;
+    transition: width .5s ease;
+}
+
+#search_bar
+{
+    width: 80%;
+    border: 2px solid var(--prim3);
+    margin: 2rem 0 0 10%;
+}
+
+
+#search_bar input,
+#search_bar select
+{
+    border: 2px solid var(--prim2);
+    background: none;
+    width: 30%;
+    height: 2.5rem;
+    color: var(--light_grey);
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    margin: 1rem 0 1rem 1rem;
+    padding-left: 2%;
+}
+
+#search_bar select option {background-color: var(--prim2);}
+
+#search_bar #wrapper_select {position: relative;}
+
+/*#search_bar #wrapper_select::before
+{
+    font-weight: 900;
+    position: absolute;
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.25rem;
+    top: 18px;
+    left: 27.6%;
+    border-left: 2px solid var(--prim2);
+}*/
+
+#search_bar button
+{
+    width: 8%;
+    height: 2.5rem;
+    -webkit-box-sizing: border-box;
+    border: 2px solid var(--prim2);
+    background: none;
+    color: var(--light_grey);
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+#search_bar button:hover
+{
+    color: var(--white);
+    background-color: var(--prim2);
+}
+
+#search_bar button i {color: var(--light_grey);}
+
+#box_results
+{
+    width: 80%;
+    border: 2px solid var(--prim3);
+    margin: 1rem 0 0 10%;
+}
+
+#box_results p
+{
+    margin: 0.75rem 0 0.75rem 3%;
+    color: var(--light_grey);
+    font-weight: 500;
+}
+
+#box_results p span#text_bold {font-weight: 900;}
+
+#table_wrapper
+{
+    overflow-x: hidden;
+    border: 2px solid var(--prim3);
+    width: 80%;
+    margin: 1rem 0 0 10%;
+    max-height: 76.5vh;
+}
+
+#table_results
+{
+    text-align: center;
+    border-collapse: collapse;
+    color: var(--grey);
+}
+
+#table_results td, th
+{
+    width: 10%;
+    border: 1px solid var(--prim0);
+    padding: 0.25rem;
+}
+
+#table_results tr:hover
+{
+    background-color: var(--prim2);
+}
+
+.show:hover, .edit:hover, .delete:hover {cursor: pointer;}
+.show i {color: var(--light_blue);}
+.edit i {color: var(--light_orange);}
+.delete i {color: var(--light_red);}

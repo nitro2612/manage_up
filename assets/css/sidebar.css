@@ -5,7 +5,27 @@
     height: 100vh;
     background-color: var(--prim2);
     float: left;
+    transition: display .5s ease;
 }
+
+#btn_show {position: absolute; margin: 1.5rem 0 0 2.5%}
+#btn_show i {color: var(--dark_grey); transition: .2s ease; cursor: pointer;}
+#btn_show:hover i {color: var(--light_green);}
+
+.sidebar_hidden {display: none;}
+
+#sidebar #btn_close
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.8rem 3.5% 0 0;
+    cursor: pointer;
+}
+
+#sidebar #btn_close i {color: var(--dark_grey); transition: color .2s ease;}
+
+#sidebar #btn_close:hover i {color: var(--light_red);}
 
 #sidebar h1
 {

@@ -1,21 +1,20 @@
+<!--JavaScript Libraries-->
+<script src="https://kit.fontawesome.com/d3420f7f4c.js"></script>
+<script type="text/javascript" src="../../assets/lib/jquery.js"></script>
+<script type="text/javascript" src="../../assets/lib/jqplot/jquery.jqplot.min.js"></script>
+
 <!--CSS Libraries-->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../../assets/lib/jqplot/jquery.jqplot.min.css" />
 <link rel="stylesheet" href="../../assets/css/color.css" />
 
 <!--Custom Stylesheets-->
 <link rel="stylesheet" href="../../assets/css/elements.css" />
 <link rel="stylesheet" href="../../assets/css/main.css" />
 <link rel="stylesheet" href="../../assets/css/sidebar.css" />
-<link rel="stylesheet" href="../../assets/css/navigation.css" />
-
-<!--JavaScript Libraries-->
-<script src="https://kit.fontawesome.com/d3420f7f4c.js"></script>
-<script type="text/javascript" src="../../assets/lib/jquery.js"></script>
-<script type="text/javascript" src="../../assets/lib/jqplot/jquery.jqplot.min.js"></script>
 
 <!--Custom JavaScript Files-->
 <script type="text/javascript" src="../../assets/js/main.js"></script>
+<script type="text/javascript" src="../../assets/js/sidebar.js"></script>
 
 <!--jQplot Plugins-->
 <script type="text/javascript" src="../../assets/lib/jqplot/excanvas.js"></script>

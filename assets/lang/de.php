@@ -1,19 +1,29 @@
 <?php
 $lang = [
-        'title' => 'manageUP | Startseite',
-        'btn_login' => 'Anmelden',
-        'header_select_action' =>
+        'title_home' => 'manageUP | Startseite',
+        'title_management' => 'manageUP | Verwaltung',
+        'sidebar' =>
         [
-            'title' => 'Aktionen',
-            'option1' => 'Einstellungen',
-            'option2' => 'Verwaltung',
-            'option3' => 'Abmelden'
+            'status' => 'Status:',
+            'name' => 'Name:',
+            'role' => 'Rolle:',
+            'area' => 'Bereich:',
+            'department' => 'Abteilung:',
+            'buttons' =>
+            [
+                'statistics' => 'Statistiken',
+                'management' => 'Verwaltung',
+                'settings' => 'Einstellungen',
+                'logout' => 'Abmelden'
+            ]
         ],
-        'header_lang_selector' =>
+        'navigation' =>
         [
-            'title' => 'Sprache',
-            'german' => 'Deutsch',
-            'english' => 'Englisch',
-            'french' => 'Französisch'
+            'projects' => 'Projekte',
+            'working_time' => 'Arbeitszeit',
+            'requests' => 'Anfragen',
+            'personnel' => 'Personal',
+            'department' => 'Abteilung',
+            'internal_news' => 'Interne news'
         ]
 ];

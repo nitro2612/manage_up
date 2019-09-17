@@ -10,7 +10,7 @@ class db
     public function __construct()
     {
         $this->host = 'localhost';
-        $this->name = 'manage_up';
+        $this->db_name = 'manageup';
         $this->user = 'admin';
         $this->pwd = 'admin';
     }
