@@ -1,14 +1,16 @@
 $(document).ready(function ()
 {
-        $('#sidebar #btn_close').click(function ()
+        $('#btn_close').click(function ()
         {
-                $('#sidebar').addClass('sidebar_hidden');
-                $('#management').css('width', '100%');
+            $('#management').css('width', '100%');
+            $('#navigation').css('width', '100%');
+            $('#sidebar').css('margin-left', '-25%');
         });
 
         $('#btn_show').click(function ()
         {
             $('#management').css('width', '75%');
-            $('#sidebar').removeClass('sidebar_hidden');
+            $('#navigation').css('width', '75%');
+            $('#sidebar').css('margin-left', '0');
         })
 });

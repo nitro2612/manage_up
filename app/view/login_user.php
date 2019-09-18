@@ -12,7 +12,7 @@
         </div>
         <?php if(isset($_SESSION['user_id'])): ?>
             <?php include '../../util/module/sidebar.php' ?>
-            <?php include '../../util/module/navigation.php' ?>
+            <?php include '../../util/module/login_module.php' ?>
         <?php else: ?>
             <!--TODO: Error-page-->
         <?php endif; ?>

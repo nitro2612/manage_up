@@ -1,5 +1,5 @@
 <div id="sidebar">
-    <?php $_SESSION['user_id'] = 1; ?>
+    <?php $_SESSION['user_id'] = 'fff'; ?>
     <div id="btn_close">
         <i class="far fa-times-circle fa-2x"></i>
     </div>
@@ -15,7 +15,7 @@
         </div>
         <span></span>
         <div id="actions">
-            <?php if(isset($_SESSION['userid'])): ?>
+            <?php if(isset($_SESSION['user_id'])): ?>
                 <div id="btn_admin">
                     <button id="btn_statistics" class="btn btn_warning"><?php echo $lang['sidebar']['buttons']['statistics'] ?></button>
                     <button id="btn_management" class="btn btn_warning"><?php echo $lang['sidebar']['buttons']['management'] ?></button>

@@ -5,11 +5,12 @@
     height: 100vh;
     background-color: var(--prim2);
     float: left;
-    transition: display .5s ease;
+    transition: margin .5s ease-in-out;
+    margin-left: -25%;
 }
 
 #btn_show {position: absolute; margin: 1.5rem 0 0 2.5%}
-#btn_show i {color: var(--dark_grey); transition: .2s ease; cursor: pointer;}
+#btn_show i {color: var(--dark_grey); transition: color .2s ease; cursor: pointer;}
 #btn_show:hover i {color: var(--light_green);}
 
 .sidebar_hidden {display: none;}

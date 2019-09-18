@@ -25,5 +25,46 @@ $lang = [
             'personnel' => 'Personnel',
             'department' => 'Department',
             'internal_news' => 'Internal news'
+        ],
+        'management' =>
+        [
+            'search' =>
+            [
+                'placeholder' => 'Select search criterion',
+                'id' => 'Employee number',
+                'first_name' => 'First name',
+                'last_name' => 'Last name',
+                'email' => 'E-Mail',
+                'street' => 'Street',
+                'domicile' => 'Domicile',
+                'post_code' => 'Post code',
+                'area' => 'Area',
+                'department' => 'Department',
+                'job' => 'Job',
+                'role' => 'Role',
+                'created_at' => 'Created at',
+                'updated_at' => 'Updated at',
+                'search_value' => 'Search..',
+                'button' => 'Search'
+            ],
+            'table' =>
+            [
+                'id' => 'Employee number',
+                'first_name' => 'First name',
+                'last_name' => 'Last name',
+                'area' => 'Area',
+                'department' => 'Department',
+                'job' => 'Job',
+                'updated_at' => 'Updated at',
+                'show' => 'Show',
+                'edit' => 'Edit',
+                'delete' => 'Delete'
+            ],
+            'result' => 'Result',
+            'no_matches' => 'No matches',
+            'matches_sgl' => 'match',
+            'matches_pl' => 'matches',
+            'no_info' => 'Not specified',
+            'not_updated' => 'Not updated yet'
         ]
 ];
