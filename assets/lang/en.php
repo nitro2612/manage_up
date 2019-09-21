@@ -4,7 +4,8 @@ $lang = [
         [
             'title_home' => 'manageUP | Home',
             'title_management' => 'manageUP | Management',
-            'title_login' => 'manageUP | Login'
+            'title_login' => 'manageUP | Login',
+            'title_user_management' => 'manageUP | User management'
         ],
         'sidebar' =>
         [

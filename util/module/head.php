@@ -1,3 +1,5 @@
+<meta charset="utf-8" />
+
 <!--JavaScript Libraries-->
 <script src="https://kit.fontawesome.com/d3420f7f4c.js"></script>
 <script type="text/javascript" src="../../assets/lib/jquery.js"></script>

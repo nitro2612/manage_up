@@ -60,39 +60,41 @@ if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
         <?php endif; ?>
     </div>
     <div id="table_wrapper">
-        <table id="table_results">
-            <thead>
-                <tr>
-                    <th id="id"><?php echo $lang['management']['table']['id']; ?></th>
-                    <th id="first_name"><?php echo $lang['management']['table']['first_name']; ?></th>
-                    <th id="last_name"><?php echo $lang['management']['table']['last_name']; ?></th>
-                    <th id="area"><?php echo $lang['management']['table']['area']; ?></th>
-                    <th id="department"><?php echo $lang['management']['table']['department']; ?></th>
-                    <th id="job"><?php echo $lang['management']['table']['job']; ?></th>
-                    <th id="updated_at"><?php echo $lang['management']['table']['updated_at']; ?></th>
-                    <th><?php echo $lang['management']['table']['show']; ?></th>
-                    <th><?php echo $lang['management']['table']['edit']; ?></th>
-                    <th><?php echo $lang['management']['table']['delete']; ?></th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php if(isset($_GET['search_select_op']) && isset($_GET['man_search_value'])): ?>
-                <?php while($row = mysqli_fetch_array($result)): ?>
+        <form action="user.php">
+            <table id="table_results">
+                <thead>
                     <tr>
-                        <td class="id"><?php echo $row[0] ?></td>
-                        <td class="first_name"><?php echo $row[1] ?></td>
-                        <td class="last_name"><?php echo $row[2] ?></td>
-                        <td class="area"><?php echo ($row[8] == 'n/a') ? $lang['management']['no_info'] : $row[8]; ?></td>
-                        <td class="department"><?php echo $row[9] ?></td>
-                        <td class="job"><?php echo $row[10] ?></td>
-                        <td class="updated_at"><?php echo ($row[13] == null) ? $lang['management']['not_updated'] : $row[13]; ?></td>
-                        <td class="show"><i class="fas fa-eye"></i></td>
-                        <td class="edit"><i class="fas fa-edit"></i></td>
-                        <td class="delete"><i class="fas fa-trash-alt"></i></td>
+                        <th id="id"><?php echo $lang['management']['table']['id']; ?></th>
+                        <th id="first_name"><?php echo $lang['management']['table']['first_name']; ?></th>
+                        <th id="last_name"><?php echo $lang['management']['table']['last_name']; ?></th>
+                        <th id="area"><?php echo $lang['management']['table']['area']; ?></th>
+                        <th id="department"><?php echo $lang['management']['table']['department']; ?></th>
+                        <th id="job"><?php echo $lang['management']['table']['job']; ?></th>
+                        <th id="updated_at"><?php echo $lang['management']['table']['updated_at']; ?></th>
+                        <th><?php echo $lang['management']['table']['show']; ?></th>
                     </tr>
-                <?php endwhile; ?>
-            <?php endif; ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                <?php if(isset($_GET['search_select_op']) && isset($_GET['man_search_value'])): ?>
+                    <?php while($row = mysqli_fetch_array($result)): ?>
+                        <tr>
+                            <td class="id"><?php echo $row[0] ?></td>
+                            <td class="first_name"><?php echo $row[1] ?></td>
+                            <td class="last_name"><?php echo $row[2] ?></td>
+                            <td class="area"><?php echo ($row[8] == 'n/a') ? $lang['management']['no_info'] : $row[8]; ?></td>
+                            <td class="department"><?php echo $row[9] ?></td>
+                            <td class="job"><?php echo $row[10] ?></td>
+                            <td class="updated_at"><?php echo ($row[13] == null) ? $lang['management']['not_updated'] : $row[13]; ?></td>
+                            <td class="show">
+                                <button class="btn_redirect" type="submit" name="id" value="<?php echo $row[0] ?>">
+                                    <i class="fas fa-eye fa-2x"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+                </tbody>
+            </table>
+        </form>
     </div>
 </div>

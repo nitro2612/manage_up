@@ -113,7 +113,8 @@
     background-color: var(--prim2);
 }
 
-.show:hover, .edit:hover, .delete:hover {cursor: pointer;}
+.btn_redirect {border: none; background: none; cursor: pointer}
+
 .show i {color: var(--light_blue);}
 .edit i {color: var(--light_orange);}
 .delete i {color: var(--light_red);}

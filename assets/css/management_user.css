@@ -1,0 +1,92 @@
+#wrapper
+{
+    width: 100%;
+    height: 100vh;
+    transition: .5s ease-in-out;
+    float: right;
+    overflow-y: scroll;
+}
+
+#user_box
+{
+    width: 60%;
+    margin: 0 0 0 20%;
+    padding-top: 2rem;
+    background-color: var(--prim0);
+}
+
+#user_box #selector {width: 50%; padding: 2rem 0 0 25%; margin-bottom: 1rem;}
+
+#user_box #selector ul {border: 3px solid var(--prim2);}
+
+#user_box #selector li
+{
+    display: inline-block;
+    width: 33.31%;
+    text-align: center;
+    color: var(--light_grey);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.5rem 0 0.5rem 0;
+    border-right: 3px solid var(--prim2);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: .2s ease;
+}
+#user_box #selector li:first-child {background-color: var(--prim2);}
+#user_box #selector li:last-child {border: none;}
+
+#user_box #selector li:hover {background-color: var(--prim2);}
+
+#boxes #show {color: var(--light_grey); padding-bottom: 2rem;}
+
+#table_user {width: 60%; border-collapse: collapse; margin: 0 0 0 20%;}
+
+#show h1,
+#delete h1,
+#edit h1{text-align: center; margin: 1rem 0 2rem 0; color: var(--light_grey);}
+
+#table_user td {border: 3px solid var(--prim2); padding: 1rem;}
+
+#boxes #delete {display: none;}
+#boxes #edit {display: none;}
+
+#edit {color: var(--light_grey);}
+
+#edit input
+{
+    border: 2px solid var(--prim2);
+    background: none;
+    width: 72%;
+    margin-left: 10%;
+    height: 2.5rem;
+    padding: 0 4% 0 4%;
+    font-size: 1rem;
+    color: var(--light_grey);
+}
+
+#edit input:focus
+{
+    border-color: var(--dark_green);
+}
+
+#edit #btn_save,
+#delete #btn_delete
+{
+    width: 10%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5px;
+    color: var(--light_grey);
+    font-size: 1rem;
+    margin: 2rem 0 2rem 45%;
+    transition: .2s ease;
+    cursor: pointer;
+}
+
+#delete p
+{
+    margin: 1rem 0 0 0;
+    color: var(--light_grey);
+    text-align: center;
+}

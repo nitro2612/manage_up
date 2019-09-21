@@ -9,4 +9,9 @@ $(document).ready(function ()
     {
         window.location.href = '../../util/helpers/logout.php';
     });
+
+    $('#btn_home').click(function ()
+    {
+       window.location.href = 'index.php';
+    });
 });

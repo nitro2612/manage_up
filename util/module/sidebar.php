@@ -1,16 +1,18 @@
 <div id="sidebar">
+    <div id="btn_home">
+        <i class="fas fa-home fa-2x"></i>
+    </div>
     <div id="btn_close">
         <i class="far fa-times-circle fa-2x"></i>
     </div>
     <h1>manageUP</h1>
-    <span class="seperator"></span>
     <div id="user">
         <div id="user_info">
-            <p id="status"><?php echo $lang['sidebar']['status'] ?> <span id="status_color">Online</span></p>
-            <p id="name"><?php echo $lang['sidebar']['name'] ?> Daniel Reinhold</p>
-            <p id="role"><?php echo $lang['sidebar']['role'] ?> <span id="role_color">Admin</span></p>
-            <p id="area"><?php echo $lang['sidebar']['area'] ?> Local Networks</p>
-            <p id="department"><?php echo $lang['sidebar']['department'] ?> Software</p>
+            <p id="status"><?php echo $lang['sidebar']['status']?>&nbsp;<span id="status_color">ERROR</span></p>
+            <p id="name"><?php echo $lang['sidebar']['name']?>&nbsp;<?php echo $_SESSION['first_name'] . ' ' . $_SESSION['last_name'];?></p>
+            <p id="role"><?php echo $lang['sidebar']['role']?>&nbsp;<span id="role_color"><?php echo $_SESSION['role'];?></span></p>
+            <p id="area"><?php echo $lang['sidebar']['area']?>&nbsp;<?php echo $_SESSION['area'];?></p>
+            <p id="department"><?php echo $lang['sidebar']['department']?>&nbsp;<?php echo $_SESSION['department'];?></p>
         </div>
         <span></span>
         <div id="actions">

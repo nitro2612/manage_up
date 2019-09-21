@@ -13,6 +13,10 @@
 #btn_show i {color: var(--dark_grey); transition: color .2s ease; cursor: pointer;}
 #btn_show:hover i {color: var(--light_green);}
 
+#btn_home {position: absolute; margin: 2.4rem 0 0 7%;}
+#btn_home i {color: var(--dark_grey); transition: color .2s ease; cursor: pointer;}
+#btn_home i:hover {color: var(--light_blue);}
+
 .sidebar_hidden {display: none;}
 
 #sidebar #btn_close
