@@ -1,5 +1,4 @@
 <div id="sidebar">
-    <?php $_SESSION['user_id'] = 'fff'; ?>
     <div id="btn_close">
         <i class="far fa-times-circle fa-2x"></i>
     </div>

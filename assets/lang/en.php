@@ -1,7 +1,11 @@
 <?php
 $lang = [
-        'title_home' => 'manageUP | Home',
-        'title_management' => 'manageUP | Management',
+        'title' =>
+        [
+            'title_home' => 'manageUP | Home',
+            'title_management' => 'manageUP | Management',
+            'title_login' => 'manageUP | Login'
+        ],
         'sidebar' =>
         [
             'status' => 'Status:',

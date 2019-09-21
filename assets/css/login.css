@@ -1,0 +1,55 @@
+#login_wrapper
+{
+    width: 100%;
+    height: 100vh;
+    transition: .5s ease-in-out;
+    text-align: center;
+    line-height: 100%;
+}
+
+#login_wrapper h1
+{
+    color: var(--light_grey);
+    margin-top: 10rem;
+    font-size: 3rem;
+}
+
+#login_wrapper input
+{
+    width: 23%;
+    height: 2.5rem;
+    background: transparent;
+    border: 3px solid var(--prim2);
+    padding: 0 1% 0 1%;
+    color: var(--light_grey);
+    font-size: 1rem;
+}
+
+#login_wrapper input#login_user {margin-top: 10rem;}
+#login_wrapper input#login_pwd {margin-top: 1rem;}
+
+#login_wrapper button
+{
+    width: 5%;
+    height: 2.5rem;
+    background: none;
+    border: 3px solid var(--prim2);
+    color: var(--light_grey);
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+#login_wrapper button:hover {background-color: var(--prim2);}
+
+#forgot_pwd
+{
+    color: var(--grey);
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+#forgot_pwd a {text-decoration: none;color: var(--light_green);}
+
+#forgot_pwd a:hover {text-decoration: underline;}
