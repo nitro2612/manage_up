@@ -84,7 +84,7 @@ if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
                             <td class="area"><?php echo ($row[8] == 'n/a') ? $lang['management']['no_info'] : $row[8]; ?></td>
                             <td class="department"><?php echo $row[9] ?></td>
                             <td class="job"><?php echo $row[10] ?></td>
-                            <td class="updated_at"><?php echo ($row[13] == null) ? $lang['management']['not_updated'] : $row[13]; ?></td>
+                            <td class="updated_at"><?php echo ($row[13] == 0) ? $lang['management']['not_updated'] : $row[13]; ?></td>
                             <td class="show">
                                 <button class="btn_redirect" type="submit" name="id" value="<?php echo $row[0] ?>">
                                     <i class="fas fa-eye fa-2x"></i>

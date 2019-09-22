@@ -70,7 +70,7 @@
                         </tr>
                         <tr>
                             <td class="title">Updated at</td>
-                            <td><?php echo $row[13] != null ? $row[13] : 'Not updated yet';?></td>
+                            <td><?php echo $row[13] != 0 ? date('Y-m-d H:i', $row[13]) : 'Not updated yet';?></td>
                         </tr>
                     </tbody>
                 </table>
@@ -137,7 +137,10 @@
             <div id="delete">
                 <h1><?php echo $row[1] . ' ' . $row[2];?></h1>
                 <p>Are you sure that you want to delete this employee?</p>
-                <button class="btn_error" id="btn_delete">Delete</button>
+                <form action="../../util/helpers/delete_user.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $row[0]?>" />
+                    <button class="btn_error" id="btn_delete">Delete</button>
+                </form>
             </div>
         </div>
     </div>
