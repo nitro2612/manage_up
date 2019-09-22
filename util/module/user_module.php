@@ -82,7 +82,7 @@
                         <tbody>
                         <tr>
                             <td class="title">Employee number</td>
-                            <td><input type="text" name="employee_number" value="<?php echo $row[0];?>" /></td>
+                            <td><input type="text" name="employee_number" value="<?php echo $row[0];?>"/></td>
                         </tr>
                         <tr>
                             <td class="title">First name</td>
