@@ -50,6 +50,7 @@ $lang = [
                 'role' => 'Role',
                 'created_at' => 'Created at',
                 'updated_at' => 'Updated at',
+                'all' => 'Everyone',
                 'search_value' => 'Search..',
                 'button' => 'Search'
             ],

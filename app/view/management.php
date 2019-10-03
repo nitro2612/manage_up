@@ -1,8 +1,9 @@
 <?php session_start(); ?>
 <?php if(isset($_SESSION['user_id'])): ?>
-    <!DOCTYPE html>
-    <?php include_once "../../assets/lang/en.php"; ?>
-    <html lang="de">
+    <?php if($_SESSION['role'] == 'admin'): ?>
+        <!DOCTYPE html>
+        <?php include_once "../../assets/lang/en.php"; ?>
+        <html lang="de">
         <head>
             <title><?php echo $lang['title']['title_management'] ?></title>
             <?php include "../../util/module/head.php"; ?><link rel="stylesheet" href="../../assets/css/management.css" />
@@ -14,8 +15,11 @@
             </div>
             <?php include '../../util/module/sidebar.php' ?>
             <?php include '../../util/module/management_module.php' ?>
-        <?php else: ?>
-            <?php header('Location: login_user.php') ?>
-        <?php endif; ?>
-    </body>
-</html>
+        </body>
+        </html>
+    <?php else: ?>
+        <?php header('Location: index.php') ?>
+    <?php endif; ?>
+<?php else: ?>
+    <?php header('Location: login_user.php') ?>
+<?php endif; ?>

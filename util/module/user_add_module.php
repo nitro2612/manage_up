@@ -45,14 +45,14 @@
                 <tr>
                     <td>
                         <select name="department" id="department_select">
-                            <option id="placeholder" disabled selected>Department</option>
+                            <option class="placeholder" disabled selected>Department</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <select name="job" id="job_select">
-                            <option id="placeholder" disabled selected>Job</option>
+                            <option class="placeholder" disabled selected>Job</option>
                         </select>
                     </td>
                 </tr>

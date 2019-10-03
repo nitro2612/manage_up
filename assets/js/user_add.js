@@ -98,12 +98,7 @@ $(document).ready(function ()
     {
         let current = this.getAttribute('value');
 
-        $('#department_select option').remove();
-        $('#job_select option').remove();
-
-        $('#department_select').append('<option id="placeholder" selected disabled>Select a department</option>');
-        $('#job_select').append('<option id="placeholder" selected disabled>Select a job</option>');
-
+        $.each(['#department_select', '#job_select'], function (index, value) { $(value + ' option:not(.placeholder)').remove(); });
         $.each(areas, function (ind, val) { if(current === val) $.each(departments[ind], function (index, value) { $('#department_select').append(value); }); });
         $.each(areas, function (ind, val) { if(current === val) $.each(jobs[ind], function (index, value) { $('#job_select').append(value); }); });
     });

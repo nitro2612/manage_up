@@ -10,8 +10,16 @@ if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
         $type = $_GET['search_select_op'];
         $search = $_GET['man_search_value'];
 
-        $sql = "SELECT * FROM employee WHERE " . $type . "='" . $search . "'";
-        $sql_count = "SELECT COUNT(*) FROM employee WHERE " . $type . "='" . $search . "'";
+        if($type != 'all')
+        {
+            $sql = "SELECT * FROM employee WHERE " . $type . "='" . $search . "'";
+            $sql_count = "SELECT COUNT(*) FROM employee WHERE " . $type . "='" . $search . "'";
+        }
+        else
+        {
+            $sql = "SELECT * FROM employee";
+            $sql_count = "SELECT COUNT(*) FROM employee";
+        }
         $length = mysqli_fetch_array($db->getConnection()->query($sql_count));
 
         $result = $db->getConnection()->query($sql);
@@ -40,6 +48,7 @@ if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
                     <option value="role"><?php echo $lang['management']['search']['role'];?></option>
                     <option value="created_at"><?php echo $lang['management']['search']['created_at'];?></option>
                     <option value="updated_at"><?php echo $lang['management']['search']['updated_at'];?></option>
+                    <option value="all"><?php echo $lang['management']['search']['all'];?></option>
                 </select>
                 <input type="text" id="search_input" name="man_search_value" placeholder="<?php echo $lang['management']['search']['search_value']; ?>" />
                 <button type="submit" id="btn_search"><?php echo $lang['management']['search']['button']; ?></button>

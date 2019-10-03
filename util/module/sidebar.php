@@ -17,10 +17,12 @@
         <span></span>
         <div id="actions">
             <?php if(isset($_SESSION['user_id'])): ?>
-                <div id="btn_admin">
-                    <button id="btn_statistics" class="btn btn_warning"><?php echo $lang['sidebar']['buttons']['statistics'] ?></button>
-                    <button id="btn_management" class="btn btn_warning"><?php echo $lang['sidebar']['buttons']['management'] ?></button>
-                </div>
+                <?php if($_SESSION['role'] == 'admin'): ?>
+                    <div id="btn_admin">
+                        <button id="btn_statistics" class="btn btn_warning"><?php echo $lang['sidebar']['buttons']['statistics'] ?></button>
+                        <button id="btn_management" class="btn btn_warning"><?php echo $lang['sidebar']['buttons']['management'] ?></button>
+                    </div>
+                <?php endif; ?>
             <?php endif ?>
             <div id="btn_user">
                 <button id="btn_settings" class="btn btn_settings"><?php echo $lang['sidebar']['buttons']['settings'] ?></button>
