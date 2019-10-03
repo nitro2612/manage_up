@@ -6,7 +6,7 @@
             <br>
             <input type="password" name="pwd" id="login_pwd" placeholder="Passwort" />
             <br>
-            <p id="forgot_pwd">Passwort vergessen? <a href="#">Hilfe</a></p>
+            <p id="forgot_pwd">Passwort vergessen? <a href="mailto:support@manageup.com?subject=Passwort vergessen">Hilfe</a></p>
             <button type="submit">Login</button>
         </form>
     </div>

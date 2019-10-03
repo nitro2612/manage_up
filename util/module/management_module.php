@@ -19,6 +19,9 @@ if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
 }
 ?>
 <div id="management">
+    <div id="btn_user_add">
+        <i class="fas fa-user-plus fa-2x"></i>
+    </div>
     <div id="search_bar">
         <div id="wrapper_select">
             <form action="" method="get">
@@ -40,6 +43,12 @@ if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
                 </select>
                 <input type="text" id="search_input" name="man_search_value" placeholder="<?php echo $lang['management']['search']['search_value']; ?>" />
                 <button type="submit" id="btn_search"><?php echo $lang['management']['search']['button']; ?></button>
+                <select name="download_table" id="download_table">
+                    <option value="placeholder">Download</option>
+                    <option value="csv" id="csv">.CSV</option>
+                    <option value="xlsx" id="xlsx" disabled>.XLSX (In development)</option>
+                    <option value="pdf" id="pdf" disabled>.PDF (In development)</option>
+                </select>
             </form>
         </div>
     </div>

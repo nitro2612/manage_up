@@ -14,4 +14,10 @@ $(document).ready(function ()
     {
        window.location.href = 'index.php';
     });
+
+    $('#btn_user_add').click(function ()
+    {
+        window.location.href = 'add_user.php';
+    });
+
 });

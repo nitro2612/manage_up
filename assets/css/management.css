@@ -6,6 +6,18 @@
     transition: width .5s ease-in-out;
 }
 
+#btn_user_add
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 3rem 5% 0 0;
+    cursor: pointer;
+}
+
+#btn_user_add i {color: var(--prim0); transition: color .2s ease;}
+#btn_user_add i:hover {color: var(--light_blue);}
+
 #search_bar
 {
     width: 80%;
@@ -28,6 +40,15 @@
 }
 
 #search_bar select option {background-color: var(--prim2);}
+
+select#download_table
+{
+    width: 7%;
+    padding: 0;
+    text-align: center;
+    float: right;
+    margin-right: 2.5%;
+}
 
 #search_bar #wrapper_select {position: relative;}
 

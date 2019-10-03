@@ -29,7 +29,7 @@
         </div>
         <div id="footer">
             <p id="software_version">manageUP 1.0</p>
-            <h3 id="company">&copy; 2019, Flexware GmbH</h3>
+            <h3 id="company">&copy; 2019, Daniel Reinhold</h3>
         </div>
     </div>
 </div>
