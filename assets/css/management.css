@@ -8,9 +8,7 @@
 
 #btn_user_add
 {
-    position: absolute;
-    right: 0;
-    top: 0;
+    float: right;
     margin: 3rem 5% 0 0;
     cursor: pointer;
 }
@@ -51,18 +49,6 @@ select#download_table
 }
 
 #search_bar #wrapper_select {position: relative;}
-
-/*#search_bar #wrapper_select::before
-{
-    font-weight: 900;
-    position: absolute;
-    display: inline-block;
-    width: 2.5rem;
-    height: 2.25rem;
-    top: 18px;
-    left: 27.6%;
-    border-left: 2px solid var(--prim2);
-}*/
 
 #search_bar button
 {

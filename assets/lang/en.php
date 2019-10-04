@@ -63,9 +63,8 @@ $lang = [
                 'department' => 'Department',
                 'job' => 'Job',
                 'updated_at' => 'Updated at',
-                'show' => 'Show',
-                'edit' => 'Edit',
-                'delete' => 'Delete'
+                'role' => 'Role',
+                'show' => 'Show'
             ],
             'result' => 'Result',
             'no_matches' => 'No matches',

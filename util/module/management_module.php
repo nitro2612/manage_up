@@ -35,28 +35,28 @@ if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
             <form action="" method="get">
                 <select name="search_select_op" id="search_select">
                     <option disabled selected><?php echo $lang['management']['search']['placeholder'];?></option>
-                    <option value="id"><?php echo $lang['management']['search']['id'];?></option>
-                    <option value="first_name"><?php echo $lang['management']['search']['first_name'];?></option>
-                    <option value="last_name"><?php echo $lang['management']['search']['last_name'];?></option>
-                    <option value="email"><?php echo $lang['management']['search']['email'];?></option>
-                    <option value="street"><?php echo $lang['management']['search']['street'];?></option>
-                    <option value="domicile"><?php echo $lang['management']['search']['domicile'];?></option>
-                    <option value="post_code"><?php echo $lang['management']['search']['post_code'];?></option>
-                    <option value="area"><?php echo $lang['management']['search']['area'];?></option>
-                    <option value="department"><?php echo $lang['management']['search']['department'];?></option>
-                    <option value="job"><?php echo $lang['management']['search']['job'];?></option>
-                    <option value="role"><?php echo $lang['management']['search']['role'];?></option>
-                    <option value="created_at"><?php echo $lang['management']['search']['created_at'];?></option>
-                    <option value="updated_at"><?php echo $lang['management']['search']['updated_at'];?></option>
+                    <option value="id"><?php echo $lang['emp_table']['id'];?></option>
+                    <option value="first_name"><?php echo $lang['emp_table']['first_name'];?></option>
+                    <option value="last_name"><?php echo $lang['emp_table']['last_name'];?></option>
+                    <option value="email"><?php echo $lang['emp_table']['email'];?></option>
+                    <option value="street"><?php echo $lang['emp_table']['street'];?></option>
+                    <option value="domicile"><?php echo $lang['emp_table']['domicile'];?></option>
+                    <option value="post_code"><?php echo $lang['emp_table']['post_code'];?></option>
+                    <option value="area"><?php echo $lang['emp_table']['area'];?></option>
+                    <option value="department"><?php echo $lang['emp_table']['department'];?></option>
+                    <option value="job"><?php echo $lang['emp_table']['job'];?></option>
+                    <option value="role"><?php echo $lang['emp_table']['role'];?></option>
+                    <option value="created_at"><?php echo $lang['emp_table']['created_at'];?></option>
+                    <option value="updated_at"><?php echo $lang['emp_table']['updated_at'];?></option>
                     <option value="all"><?php echo $lang['management']['search']['all'];?></option>
                 </select>
                 <input type="text" id="search_input" name="man_search_value" placeholder="<?php echo $lang['management']['search']['search_value']; ?>" />
                 <button type="submit" id="btn_search"><?php echo $lang['management']['search']['button']; ?></button>
                 <select name="download_table" id="download_table">
-                    <option value="placeholder">Download</option>
+                    <option value="placeholder"><?php echo $lang['management']['download']?></option>
                     <option value="csv" id="csv">.CSV</option>
-                    <option value="xlsx" id="xlsx" disabled>.XLSX (In development)</option>
-                    <option value="pdf" id="pdf" disabled>.PDF (In development)</option>
+                    <option value="xlsx" id="xlsx" disabled>.XLSX <?php echo "(" .  $lang['management']['in_development'] . ")"?></option>
+                    <option value="pdf" id="pdf" disabled>.PDF <?php echo "(" .  $lang['management']['in_development'] . ")"?></option>
                 </select>
             </form>
         </div>
@@ -89,6 +89,7 @@ if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
                         <th id="department"><?php echo $lang['management']['table']['department']; ?></th>
                         <th id="job"><?php echo $lang['management']['table']['job']; ?></th>
                         <th id="updated_at"><?php echo $lang['management']['table']['updated_at']; ?></th>
+                        <th id="role"><?php echo $lang['management']['table']['role']; ?></th>
                         <th><?php echo $lang['management']['table']['show']; ?></th>
                     </tr>
                 </thead>
@@ -103,6 +104,7 @@ if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
                             <td class="department"><?php echo $row[9] ?></td>
                             <td class="job"><?php echo $row[10] ?></td>
                             <td class="updated_at"><?php echo ($row[13] == 0) ? $lang['management']['not_updated'] : $row[13]; ?></td>
+                            <td class="role"><?php echo $row[11]; ?></td>
                             <td class="show">
                                 <button class="btn_redirect" type="submit" name="id" value="<?php echo $row[0] ?>">
                                     <i class="fas fa-eye fa-2x"></i>

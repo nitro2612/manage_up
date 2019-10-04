@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include_once "../../assets/lang/en.php"; ?>
+<?php include_once "../../assets/lang/de.php"; ?>
 <html lang="de">
     <head>
         <title><?php echo $lang['title']['title_login'] ?></title>

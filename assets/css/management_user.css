@@ -71,7 +71,8 @@
 }
 
 #edit #btn_save,
-#delete #btn_delete
+#delete #btn_delete,
+#delete #btn_delete_d
 {
     width: 10%;
     height: 2.5rem;
@@ -82,6 +83,17 @@
     margin: 2rem 0 2rem 45%;
     transition: .2s ease;
     cursor: pointer;
+}
+
+#delete #btn_delete_d
+{
+    filter: brightness(0.9) grayscale(0.5);
+}
+
+#delete #btn_delete_d:hover
+{
+    background-color: var(--light_red);
+    cursor: not-allowed;
 }
 
 #delete p
