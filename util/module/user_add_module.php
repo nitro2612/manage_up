@@ -31,14 +31,14 @@
                     <td>
                         <select name="area" id="area_select">
                             <option disabled selected><?php echo $lang['user_add']['area']?></option>
-                            <option value="executive">Executive</option>
-                            <option value="distribution_1">Distribution (M + S)</option>
-                            <option value="distribution_2">Distribution (F + L)</option>
-                            <option value="local_networks">Local Networks</option>
-                            <option value="mobile_networks">Mobile Networks</option>
-                            <option value="fixed_networks">Fixed Networks</option>
-                            <option value="services">Services</option>
-                            <option value="other">Other</option>
+                            <option value="exc">Executive</option>
+                            <option value="dst_1">Distribution (M + S)</option>
+                            <option value="dst_2">Distribution (F + L)</option>
+                            <option value="ln">Local Networks</option>
+                            <option value="mn">Mobile Networks</option>
+                            <option value="fn">Fixed Networks</option>
+                            <option value="svc">Services</option>
+                            <option value="oth">Other</option>
                         </select>
                     </td>
                 </tr>
@@ -60,10 +60,10 @@
                     <td>
                         <select name="role">
                             <option value="user" disabled selected><?php echo $lang['user_add']['role']?></option>
-                            <option value="user"><?php echo $lang['user_add']['roles']['user']?></option>
-                            <option value="dep_man"><?php echo $lang['user_add']['roles']['area_manager']?></option>
-                            <option value="tech"><?php echo $lang['user_add']['roles']['technician']?></option>
-                            <option value="admin"><?php echo $lang['user_add']['roles']['admin']?></option>
+                            <option value="1"><?php echo $lang['user_add']['roles']['user']?></option>
+                            <option value="2"><?php echo $lang['user_add']['roles']['area_manager']?></option>
+                            <option value="3"><?php echo $lang['user_add']['roles']['technician']?></option>
+                            <option value="4"><?php echo $lang['user_add']['roles']['admin']?></option>
                         </select>
                     </td>
                 </tr>

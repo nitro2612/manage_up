@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php if(isset($_SESSION['user_id'])): ?>
-    <?php if($_SESSION['role'] == 'admin'): ?>
+    <?php if($_SESSION['role'] == 4): ?>
         <!DOCTYPE html>
         <?php include_once "../../assets/lang/de.php"; ?>
         <html lang="de">

@@ -1,6 +1,6 @@
 $(document).ready(function ()
 {
-    var areas = ['executive', 'distribution_1', 'distribution_2', 'local_networks', 'mobile_networks', 'fixed_networks', 'services', 'other'];
+    var areas = ['exc', 'dst_1', 'dst_2', 'ln', 'mn', 'fn', 'svc', 'oth'];
     var departments = [
             [
                 '<option value="ofc">Office</option>',
@@ -46,50 +46,59 @@ $(document).ready(function ()
         ];
     var jobs = [
             [
-                '<option value="executive_1">Executive Job 1</option>',
-                '<option value="executive_2">Executive Job 2</option>',
-                '<option value="executive_3">Executive Job 3</option>'
+                '<option value="ceo">CEO</option>',
+                '<option value="sec">Secretary</option>',
+                '<option value="bsr">Bursar</option>'
             ],
 
             [
-                '<option value="dist_1_1">Distribution1 Job 1</option>',
-                '<option value="dist_1_2">Distribution1 Job 2</option>',
-                '<option value="dist_1_3">Distribution1 Job 3</option>'
+                '<option value="ccc_1">Clerk call center</option>',
+                '<option value="emp_s_1">Employee sale</option>',
+                '<option value="sls_m_1">Sales manager</option>',
+                '<option value="am_dst_1">Area manager</option>'
             ],
 
             [
-                '<option value="dist_2_1">Distribution2 Job 1</option>',
-                '<option value="dist_2_2">Distribution2 Job 2</option>',
-                '<option value="dist_2_3">Distribution2 Job 3</option>'
+                '<option value="emp_s_2">Employee sale</option>',
+                '<option value="sls_m_2">Sales manager</option>',
+                '<option value="am_dst_2">Area manager</option>'
             ],
             [
-                '<option value="local_networks_1">Local Networks Job 1</option>',
-                '<option value="local_networks_2">Local Networks Job 2</option>',
-                '<option value="local_networks_3">Local Networks Job 3</option>'
-            ],
-
-            [
-                '<option value="mobile_networks_1">Mobile Networks Job 1</option>',
-                '<option value="mobile_networks_2">Mobile Networks Job 2</option>',
-                '<option value="mobile_networks_3">Mobile Networks Job 3</option>'
+                '<option value="sfd_wfe">Software developer (Web/Frontend)</option>',
+                '<option value="sfd_wbe">Software developer (Web/Backend)</option>',
+                '<option value="sfd_sys">Software developer (Systems)</option>',
+                '<option value="sfe">Software Engineer</option>',
+                '<option value="am_ln">Area manager</option>'
             ],
 
             [
-                '<option value="fixed_networks_1">Fixed Networks Job 1</option>',
-                '<option value="fixed_networks_2">Fixed Networks Job 2</option>',
-                '<option value="fixed_networks_3">Fixed Networks Job 3</option>'
+                '<option value="cv_en_mn">Civil Engineers</option>',
+                '<option value="mb_rd_ipt">Mobile radio inspector</option>',
+                '<option value="emp_sv">Employee service</option>',
+                '<option value="et_tcn">Electronics technician</option>',
+                '<option value="mct">Mechatronics</option>',
+                '<option value="am_mn">Area manager</option>'
             ],
 
             [
-                '<option value="Services_1">Services Job 1</option>',
-                '<option value="Services_2">Services Job 2</option>',
-                '<option value="Services_3">Services Job 3</option>'
+                '<option value="cv_en_fn">Civil Engineers</option>',
+                '<option value="emp_bld_ctt">Employee building construction</option>',
+                '<option value="it_sys_eng">IT systems engineer</option>',
+                '<option value="am_fn">Area manager</option>'
             ],
 
             [
-                '<option value="other_1">Other Job 1</option>',
-                '<option value="other_1">Other Job 2</option>',
-                '<option value="other_1">Other Job 3</option>'
+                '<option value="emp_cc">Employee Call center</option>',
+                '<option value="emp_sup">Employee Support</option>',
+                '<option value="emp_ast">Employee Assistance</option>',
+                '<option value="am_svc">Area manager</option>'
+            ],
+
+            [
+                '<option value="stf_mng">Staff manager</option>',
+                '<option value="stf_mng_t">Staff manager Trainee</option>',
+                '<option value="emp_stf">Employee staff</option>',
+                '<option value="ctk">Caretaker</option>'
             ]
         ];
 

@@ -1,35 +1,30 @@
 <?php
 include "db.php";
 
-if( isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password_r']) &&  isset($_POST['street']) &&
-    isset($_POST['city']) && isset($_POST['post_code']) && isset($_POST['area']) &&  isset($_POST['department']) &&  isset($_POST['job']) &&  isset($_POST['role'])) {
+$fields = ['first_name', 'last_name', 'email', 'password', 'password_r', 'street', 'city', 'post_code', 'area', 'department', 'job', 'role'];
+$check = false;
 
-    if (!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['password_r']) && !empty($_POST['street']) &&
-        !empty($_POST['city']) && !empty($_POST['post_code']) && !empty($_POST['area']) && !empty($_POST['department']) && !empty($_POST['job']) && !empty($_POST['role']))
+foreach ($fields as $key => $value)
+{
+    if(isset($_POST[$value]) && !empty($_POST[$value]))
+        $check = true;
+}
+
+if($check == true)
+{
+    if ($_POST['password'] == $_POST['password_r'])
     {
-        if ($_POST['password'] == $_POST['password_r'])
-        {
-            $password = password_hash($_POST['password_r'], PASSWORD_DEFAULT);
+        $db = new db();
+        $db->getConnection()->query
+        (
+            "INSERT INTO employee (first_name, last_name, email, password, street, domicile, post_code, area, department, job, role) 
+            VALUES ('" . $_POST['first_name'] . "', '" . $_POST['last_name'] ."', '" . $_POST['email'] . "', '" . password_hash($_POST['password_r'], PASSWORD_DEFAULT)
+            . "', '" . $_POST['street'] . "', '" . $_POST['city'] ."', '" . $_POST['post_code'] ."', '" . $_POST['area'] ."', '" . $_POST['department'] ."', '" . $_POST['job']
+            ."', '". $_POST['role'] ."');"
+        );
 
-            $sql = "INSERT INTO employee (first_name, last_name, email, password, street, domicile, post_code, area, department, job, role) 
-                    VALUES ('" . $_POST['first_name'] . "', '" . $_POST['last_name'] ."', '" . $_POST['email'] . "', '" . $password . "', '" . $_POST['street'] . "', '" . $_POST['city'] ."', '" . $_POST['post_code']
-                    ."', '" . $_POST['area'] ."', '" . $_POST['department'] ."', '" . $_POST['job'] ."', '". $_POST['role'] ."');";
-            $db = new db();
-            $db->getConnection()->query($sql);
-
-            header('Location: ../../app/view/management.php?search_select_op=first_name&man_search_value=' . $_POST['first_name']);
-        }
-        else
-        {
-            echo "Error: Two different passwords!";
-        }
+        header('Location: ../../app/view/management.php?search_select_op=first_name&man_search_value=' . $_POST['first_name']);
     }
     else
-    {
-        echo "Error: All field have to be filled!";
-    }
-}
-else
-{
-    echo "Error: All fields are required!";
+        echo "Error: Two different passwords!";
 }

@@ -3,13 +3,11 @@ include '../../util/helpers/db.php';
 if(isset($_POST['pers_num']) && isset($_POST['pwd']))
 {
     $db = new db();
-    $user = $_POST['pers_num'];
 
-    $password = $_POST['pwd'];
-
-    $sql = "SELECT * FROM employee WHERE id='" . $user . "';";
-    $result = $db->getConnection()->query($sql);
-    $row = mysqli_fetch_array($result);
+    $row = mysqli_fetch_array($db->getConnection()->query
+    (
+        "SELECT * FROM employee WHERE id='" . $_POST['pers_num'] . "';"
+    ));
 
     if($row != null)
     {
@@ -35,23 +33,14 @@ if(isset($_POST['pers_num']) && isset($_POST['pwd']))
                 header('Location: ../../app/view/index.php');
             }
             else
-            {
                 echo "Error result false";
-            }
         }
         else
-        {
             echo "Error: Password incorrect!";
-        }
     }
     else
-    {
         echo "Error: No such number available!";
-    }
 
 }
 else
-{
     echo "Error";
-    # TODO: Fehlermeldung (Nicht alle Eingabefelder ausgefüllt)
-}

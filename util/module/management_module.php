@@ -2,28 +2,26 @@
 include '../../util/helpers/db.php';
 
 $db = new db();
+$translator = new user_translator();
 
 if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
 {
-    if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
+    $type = $_GET['search_select_op'];
+    $search = $_GET['man_search_value'];
+
+    if($type != 'all')
     {
-        $type = $_GET['search_select_op'];
-        $search = $_GET['man_search_value'];
-
-        if($type != 'all')
-        {
-            $sql = "SELECT * FROM employee WHERE " . $type . "='" . $search . "'";
-            $sql_count = "SELECT COUNT(*) FROM employee WHERE " . $type . "='" . $search . "'";
-        }
-        else
-        {
-            $sql = "SELECT * FROM employee";
-            $sql_count = "SELECT COUNT(*) FROM employee";
-        }
-        $length = mysqli_fetch_array($db->getConnection()->query($sql_count));
-
-        $result = $db->getConnection()->query($sql);
+        $sql = "SELECT * FROM employee WHERE " . $type . "='" . $search . "'";
+        $sql_count = "SELECT COUNT(*) FROM employee WHERE " . $type . "='" . $search . "'";
     }
+    else
+    {
+        $sql = "SELECT * FROM employee";
+        $sql_count = "SELECT COUNT(*) FROM employee";
+    }
+
+    $length = mysqli_fetch_array($db->getConnection()->query($sql_count));
+    $result = $db->getConnection()->query($sql);
 }
 ?>
 <div id="management">
@@ -78,7 +76,7 @@ if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
         <?php endif; ?>
     </div>
     <div id="table_wrapper">
-        <form action="user.php">
+        <form action="user.php" method="get">
             <table id="table_results">
                 <thead>
                     <tr>
@@ -100,11 +98,11 @@ if(isset($_GET['search_select_op']) && isset($_GET['man_search_value']))
                             <td class="id"><?php echo $row[0] ?></td>
                             <td class="first_name"><?php echo $row[1] ?></td>
                             <td class="last_name"><?php echo $row[2] ?></td>
-                            <td class="area"><?php echo ($row[8] == 'n/a') ? $lang['management']['no_info'] : $row[8]; ?></td>
+                            <td class="area"><?php echo ($row[8] == 'n/a') ? $lang['management']['no_info'] : $translator->translate_area($row[8]); ?></td>
                             <td class="department"><?php echo $row[9] ?></td>
                             <td class="job"><?php echo $row[10] ?></td>
-                            <td class="updated_at"><?php echo ($row[13] == 0) ? $lang['management']['not_updated'] : $row[13]; ?></td>
-                            <td class="role"><?php echo $row[11]; ?></td>
+                            <td class="updated_at"><?php echo ($row[13] == 0) ? $lang['management']['not_updated'] : $handler->timestamp_to_date('de_date_long', $row[13]); ?></td>
+                            <td class="role"><?php echo $translator->translate_role($row[11]); ?></td>
                             <td class="show">
                                 <button class="btn_redirect" type="submit" name="id" value="<?php echo $row[0] ?>">
                                     <i class="fas fa-eye fa-2x"></i>

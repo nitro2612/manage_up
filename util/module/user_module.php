@@ -64,15 +64,15 @@
                         </tr>
                         <tr>
                             <td class="title"><?php echo $lang['emp_table']['role']?></td>
-                            <td><?php echo $row[11];?></td>
+                            <td><?php echo $translator->translate_role($row[11]); ?></td>
                         </tr>
                         <tr>
                             <td class="title"><?php echo $lang['emp_table']['created_at']?> at</td>
-                            <td><?php echo $row[12];?></td>
+                            <td><?php $handler->string_to_date_string('de_date_long', $row[12]);?></td>
                         </tr>
                         <tr>
                             <td class="title"><?php echo $lang['emp_table']['updated_at']?></td>
-                            <td><?php echo $row[13] != 0 ? date('Y-m-d H:i', $row[13]) : $lang['user']['not_updated'];?></td>
+                            <td><?php echo $row[13] != 0 ? $handler->timestamp_to_date('de_date_long', $row[13]) : $lang['user']['not_updated'];?></td>
                         </tr>
                     </tbody>
                 </table>
@@ -99,10 +99,6 @@
                             <td><input type="text" name="email" value="<?php echo $row[3];?>" /></td>
                         </tr>
                         <tr>
-                            <td class="title"><?php echo $lang['emp_table']['password']?></td>
-                            <td><input type="text" name="password" value="<?php echo $row[4];?>" /></td>
-                        </tr>
-                        <tr>
                             <td class="title"><?php echo $lang['emp_table']['street']?></td>
                             <td><input type="text" name="street" value="<?php echo $row[5];?>" /></td>
                         </tr>
@@ -116,19 +112,44 @@
                         </tr>
                         <tr>
                             <td class="title"><?php echo $lang['emp_table']['area']?></td>
-                            <td><input type="text" name="area" value="<?php echo $row[8];?>" /></td>
+                            <td>
+                                <!--Row 8-->
+                                <select name="area" id="area">
+                                    <option value="exc" <?php if($row[8] == 'exc') echo 'selected' ?> >Executive</option>
+                                    <option value="dst_1" <?php if($row[8] == 'dst_1') echo 'selected' ?> >Distribution (M + S)</option>
+                                    <option value="dst_2" <?php if($row[8] == 'dst_2') echo 'selected' ?> >Distribution (F + L)</option>
+                                    <option value="ln" <?php if($row[8] == 'ln') echo 'selected' ?> >Local Networks</option>
+                                    <option value="mn" <?php if($row[8] == 'mn') echo 'selected' ?> >Mobile Networks</option>
+                                    <option value="fn" <?php if($row[8] == 'fn') echo 'selected' ?> >Fixed Networks</option>
+                                    <option value="svc" <?php if($row[8] == 'svc') echo 'selected' ?> >Services</option>
+                                    <option value="oth" <?php if($row[8] == 'oth') echo 'selected' ?> >Other</option>
+                                </select>
+                            </td>
                         </tr>
                         <tr>
                             <td class="title"><?php echo $lang['emp_table']['department']?></td>
-                            <td><input type="text" name="department" value="<?php echo $row[9];?>" /></td>
+                            <td>
+                                <!--Row 9-->
+                                <select name="department" id="department"></select>
+                            </td>
                         </tr>
                         <tr>
                             <td class="title"><?php echo $lang['emp_table']['job']?></td>
-                            <td><input type="text" name="job" value="<?php echo $row[10];?>" /></td>
+                            <td>
+                                <!--Row 10-->
+                                <select name="job" id="job"></select>
+                            </td>
                         </tr>
                         <tr>
                             <td class="title"><?php echo $lang['emp_table']['role']?></td>
-                            <td><input type="text" name="role" value="<?php echo $row[11];?>" /></td>
+                            <td>
+                                <select name="role">
+                                    <option value="1" <?php if($row[11] == 1) echo 'selected'; ?>><?php echo $lang['user_add']['roles']['user'];?></option>
+                                    <option value="2" <?php if($row[11] == 2) echo 'selected'; ?>><?php echo $lang['user_add']['roles']['area_manager'];?></option>
+                                    <option value="3" <?php if($row[11] == 3) echo 'selected'; ?>><?php echo $lang['user_add']['roles']['technician'];?></option>
+                                    <option value="4" <?php if($row[11] == 4) echo 'selected'; ?>><?php echo $lang['user_add']['roles']['admin'];?></option>
+                                </select>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
